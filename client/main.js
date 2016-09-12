@@ -1,26 +1,14 @@
-
-
 import angular from 'angular';
 
 import angularMeteor from 'angular-meteor';
+import { name as userList } from '../imports/ui/components/userList/userList';
 
  
 
 angular.module('socially', [
 
-  angularMeteor
+    angularMeteor,
 
-])
-.controller('user',function($scope){
-    'ngInject';
-        $scope.helpers({
+    userList
 
-      users() {
-
-        return Users.find({});
-
-      }
-
-    });
-})
-
+  ]);
