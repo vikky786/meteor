@@ -4,6 +4,7 @@ import angularMeteor from 'angular-meteor';
 import template from './userList.html';
 import { Users } from '../../../api/users';
 import { name as userAdd } from '../userAdd/userAdd';
+import { name as Remove } from '../userRemove/userRemove';
 
 class userList {
   constructor($scope, $reactive) {
@@ -22,7 +23,8 @@ const name = 'userList';
 // create a module
 export default angular.module(name, [
   angularMeteor,
-  userAdd
+  userAdd,
+  Remove
 ]).component(name, {
   template,
   controllerAs: name,
