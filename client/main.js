@@ -1,8 +1,8 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
-import { name as userList } from '../imports/ui/components/userList/userList';
+import { name as Socially } from '../imports/ui/components/socially/socially';
 
-angular.module('socially', [
+angular.module('social', [
   angularMeteor,
-  userList
+  Socially
 ]);

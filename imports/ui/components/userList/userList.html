@@ -1,7 +1,9 @@
 <user-add></user-add>
 <ul>
   <li ng-repeat="u in userList.users">
+    <a ui-sref="userDetails({ userId: u._id })">
     Name : {{u.name}}
+    </a>
     <p>Profession : {{u.profession}}</p>
     <p>Digree : {{u.degree}}</p>
   

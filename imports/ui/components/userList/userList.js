@@ -1,6 +1,7 @@
 
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
+import uiRouter from 'angular-ui-router';
 import template from './userList.html';
 import { Users } from '../../../api/users';
 import { name as userAdd } from '../userAdd/userAdd';
@@ -23,6 +24,7 @@ const name = 'userList';
 // create a module
 export default angular.module(name, [
   angularMeteor,
+   uiRouter,
   userAdd,
   Remove
 ]).component(name, {
@@ -30,5 +32,15 @@ export default angular.module(name, [
   controllerAs: name,
   controller: userList
 
-});
+})
+.config(config);
+ 
+function config($stateProvider) {
+  'ngInject';
+  $stateProvider
+    .state('users', {
+      url: '/users',
+      template: '<user-list> </user-list>'
+    });
+}
 
