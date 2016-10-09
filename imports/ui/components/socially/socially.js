@@ -4,6 +4,7 @@ import uiRouter from 'angular-ui-router';
 import template from './socially.html';
 import { name as userList } from '../userList/userList';
 import { name as userDetails } from '../userDetails/userDetails';
+import { name as userProfile } from '../userProfile/userProfile';
 import { name as Navigation } from '../navigation/navigation';
 class Socially {}
  
@@ -13,6 +14,7 @@ export default angular.module(name, [
   uiRouter,
   userList,
   userDetails,
+  userProfile,
   Navigation,
   'accounts.ui'
 ])

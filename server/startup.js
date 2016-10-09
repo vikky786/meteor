@@ -1,22 +1,16 @@
 import { Meteor } from 'meteor/meteor';
 import { Users } from '../imports/api/users';
+import { Users_Details } from '../imports/api/user_details';
 Meteor.startup(() => {
    Users.remove({});
-  // if (Users.find().count() === 0) {
+  // if (Users_Details.find().count() === 0) {
   //   const users = [{
-  //     'name': 'Dubstep-Free Zone',
-  //     'profession': 'Fast just got faster with Nexus S.'
-  //   }, {
-  //       'name': 'All dubstep all the time',
-  //       'profession': 'Get it on!'
-  //     }, {
-  //       'name': 'Savage lounging',
-  //       'profession': 'Leisure suit required. And only fiercest manners.'
-
-  //     }];
+  //     'userid': Meteor.user()._id,
+      
+  //   }];
   //   users.forEach((party) => {
 
-  //     Users.insert(party)
+  //     Users_Details.insert(party)
 
   //   });
 
